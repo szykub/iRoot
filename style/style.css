@@ -1,0 +1,312 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  background: black;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container header {
+  width: 100%;
+  height: 30%;
+  padding: 3%;
+  z-index: 1;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container header .logo {
+  width: 40%;
+  height: 100%;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.container header .contact {
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container header .contact span {
+  color: #fff;
+  font-size: 2vh;
+  padding: 0 1vh;
+}
+
+.container header .contact span .icon {
+  color: #F7931D;
+}
+
+.container .middle-text {
+  width: 100%;
+  height: 40%;
+  z-index: 1;
+  position: relative;
+}
+
+.container .middle-text h1 {
+  color: #fff;
+  font-size: 5vh;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.container .middle-text:after {
+  content: "";
+  width: 60%;
+  position: absolute;
+  height: 60%;
+  left: 20%;
+  background-image: url("../images/body-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container .logos-container {
+  width: 65%;
+  height: 10%;
+  margin-left: 17.5%;
+  margin-top: -2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.container .logos-container .logo {
+  width: 15%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.container .logos-container .tripio {
+  background-image: url("../images/tripio.png");
+}
+
+.container .logos-container .helpio {
+  background-image: url("../images/helpio.png");
+}
+
+.container .logos-container .clara {
+  background-image: url("../images/clara.png");
+}
+
+.container .logos-container .losteq {
+  background-image: url("../images/losteq.png");
+}
+
+.container footer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container footer span {
+  color: #fff;
+}
+
+.container #particle-canvas {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.container #particle-canvas canvas {
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
+}
+
+@media only screen and (max-width: 1440px) {
+  .container .middle-text:after {
+    width: 70%;
+    left: 15%;
+  }
+  .container .logos-container {
+    width: 75%;
+    margin-left: 12.5%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container header {
+    padding: 1%;
+  }
+  .container header .logo {
+    width: 65%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .container header .contact {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+  }
+  .container .middle-text h1 {
+    font-size: 4vh;
+  }
+  .container .middle-text::after {
+    width: 90%;
+    left: 5%;
+  }
+  .container .logos-container {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .middle-text {
+    height: 20%;
+  }
+  .container .middle-text:after {
+    display: none;
+  }
+  .container .logos-container {
+    height: 30%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .logos-container .logo {
+    width: 25%;
+    padding: 6% 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .container header {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .container header .logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    width: 70%;
+    height: 70%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .container header .contact {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container header .contact span {
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    font-size: 1.7vh;
+  }
+  .container header .contact span i {
+    font-size: 1.7em;
+    display: block;
+    margin: 0 auto;
+  }
+  .container .middle-text {
+    height: initial;
+  }
+  .container .middle-text h1 {
+    font-size: 2.5vh;
+  }
+  .container .logos-container {
+    -webkit-box-sizing: initial;
+            box-sizing: initial;
+    height: 40%;
+  }
+  .container .logos-container .logo {
+    width: 40%;
+    height: 40%;
+  }
+  .container footer span {
+    text-align: center;
+    font-size: 1.5vh;
+    padding: 0 1vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
