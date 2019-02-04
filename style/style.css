@@ -143,8 +143,11 @@ html, body {
   background-image: url("../images/clara.png");
 }
 
-.container .logos-container .losteq {
-  background-image: url("../images/losteq.png");
+.container .logos-container .iComm {
+  font-size: 4vh;
+  color: #fff;
+  text-align: center;
+  line-height: 10vh;
 }
 
 .container footer {
